@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Sample test Suite]">
+  <test thread-count="5" name="Sample test(failed)">
+    <classes>
+      <class name="com.training.sanity.tests.RTTC_021">
+        <methods>
+          <include name="setUpBeforeClass"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.training.sanity.tests.RTTC_021 -->
+    </classes>
+  </test> <!-- Sample test(failed) -->
+</suite> <!-- Failed suite [Sample test Suite] -->
