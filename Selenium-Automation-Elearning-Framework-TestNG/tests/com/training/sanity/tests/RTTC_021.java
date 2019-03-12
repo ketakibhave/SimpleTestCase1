@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import com.training.pom.RTTC_021POM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
+import com.training.generics.ScreenShot;
 
 public class RTTC_021 {
 	WebDriver driver;
@@ -80,6 +81,8 @@ public class RTTC_021 {
 		String expectedDisplay = "No results!";
 		String actualDisplay = deleteCustomerPOM.deleteCustomerRecord();
 		assertEquals(expectedDisplay, actualDisplay);
+		ScreenShot ss=new ScreenShot(driver);
+		ss.captureScreenShot("TC021");
 	}
 
 }

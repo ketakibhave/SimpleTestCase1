@@ -35,13 +35,13 @@ public class ScreenShot {
 		String path = "C:\\Automation training\\Project\\Screenshots\\";
 		String fileName ="";
 
-		GregorianCalendar calendar = new GregorianCalendar(); 
+		//GregorianCalendar calendar = new GregorianCalendar(); 
 		
-		int date =  calendar.get(Calendar.DATE); 
-		int minute = calendar.get(Calendar.MINUTE);
-		int second = calendar.get(Calendar.SECOND); 
+		//int date =  calendar.get(Calendar.DATE); 
+		//int minute = calendar.get(Calendar.MINUTE);
+		//int second = calendar.get(Calendar.SECOND); 
 		
-		int dateout= calendar.get(Calendar.DATE);
+		//int dateout= calendar.get(Calendar.DATE);
 		Date now= new Date();
 		SimpleDateFormat dateFormat;
 		dateFormat = new SimpleDateFormat("dd-MM-yy_HH_MM_SS");
@@ -88,12 +88,15 @@ public class ScreenShot {
 		// 1. create file 
 		// 2. capture screenshot from selenium 
 		// 3. store it in physical driver 
+		Date now= new Date();
+		SimpleDateFormat dateFormat;
+		dateFormat = new SimpleDateFormat("dd-MM-yy_HH_MM_SS");
 		
 		try {
 			TakesScreenshot takeScreenShot  = (TakesScreenshot) driver; 
 			File file = takeScreenShot.getScreenshotAs(OutputType.FILE);
 			
-			FileUtils.copyFile(file, new File(path +fileName1+".png"));
+			FileUtils.copyFile(file, new File(path +fileName1+"_" +dateFormat.format(now)+".png"));
 		} catch (WebDriverException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

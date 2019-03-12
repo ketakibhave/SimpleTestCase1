@@ -11,6 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.training.generics.ScreenShot;
 import com.training.pom.RTTC025POM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -85,6 +86,8 @@ public class RTTC025 {
 		String expectedTitle="No. Returns";
 		String actualTitle=filterReturnsList.filterListbyGroup();
 		assertEquals(actualTitle, expectedTitle);
+		ScreenShot ss=new ScreenShot(driver);
+		ss.captureScreenShot("TC025");
 	}
 	
 }
