@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10995" started-at="2019-03-12T14:13:49Z" finished-at="2019-03-12T14:14:00Z">
+  <suite name="Default suite" duration-ms="14248" started-at="2019-03-20T10:37:14Z" finished-at="2019-03-20T10:37:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10995" started-at="2019-03-12T14:13:49Z" finished-at="2019-03-12T14:14:00Z">
-      <class name="com.training.sanity.tests.ParentChildForCustomers">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ParentChildForCustomers@27efef64]" name="setUpBeforeClass" is-config="true" duration-ms="11" started-at="2019-03-12T14:13:49Z" finished-at="2019-03-12T14:13:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:1, instance:com.training.sanity.tests.ParentChildForCustomers@27efef64]" name="setUp" duration-ms="8848" started-at="2019-03-12T14:13:49Z" finished-at="2019-03-12T14:13:58Z">
+    <test name="Default test" duration-ms="14248" started-at="2019-03-20T10:37:14Z" finished-at="2019-03-20T10:37:28Z">
+      <class name="com.training.sanity.tests.RTTC_081">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.RTTC_081@27efef64]" name="setUp" is-config="true" duration-ms="10847" started-at="2019-03-20T10:37:03Z" finished-at="2019-03-20T10:37:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="displayCustomersOptions()[pri:2, instance:com.training.sanity.tests.ParentChildForCustomers@27efef64]" name="displayCustomersOptions" duration-ms="434" started-at="2019-03-12T14:13:58Z" finished-at="2019-03-12T14:13:58Z">
+        <test-method status="PASS" signature="returnProduct()[pri:0, instance:com.training.sanity.tests.RTTC_081@27efef64]" name="returnProduct" duration-ms="14216" started-at="2019-03-20T10:37:14Z" finished-at="2019-03-20T10:37:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- displayCustomersOptions -->
-        <test-method status="PASS" signature="navigateToCustomerPage()[pri:3, instance:com.training.sanity.tests.ParentChildForCustomers@27efef64]" name="navigateToCustomerPage" duration-ms="725" started-at="2019-03-12T14:13:58Z" finished-at="2019-03-12T14:13:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToCustomerPage -->
-        <test-method status="PASS" signature="searchCustomerToDelete()[pri:4, instance:com.training.sanity.tests.ParentChildForCustomers@27efef64]" name="searchCustomerToDelete" duration-ms="949" started-at="2019-03-12T14:13:59Z" finished-at="2019-03-12T14:14:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchCustomerToDelete -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.ParentChildForCustomers@27efef64]" name="tearDown" is-config="true" duration-ms="1728" started-at="2019-03-12T14:14:00Z" finished-at="2019-03-12T14:14:02Z">
+        </test-method> <!-- returnProduct -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.RTTC_081@27efef64]" name="tearDown" is-config="true" duration-ms="1707" started-at="2019-03-20T10:37:28Z" finished-at="2019-03-20T10:37:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.ParentChildForCustomers -->
+      </class> <!-- com.training.sanity.tests.RTTC_081 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
