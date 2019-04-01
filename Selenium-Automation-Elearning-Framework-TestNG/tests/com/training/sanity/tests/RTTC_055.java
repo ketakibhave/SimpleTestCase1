@@ -43,7 +43,7 @@ public class RTTC_055 {
 		driver.quit();
 	}
 
-	// Admin logins the Retail website and adds a manufacturer and a product
+	// Admin logins the Retail website and adds a product
 	@Test
 	public void displayOptionsNavigateToOrders() {
 		addProduct.showCatalogOptions();

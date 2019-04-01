@@ -81,7 +81,7 @@ public class ScreenShot {
 	}
 	
 
-	public void captureScreenShot(String fileName1){
+	public void captureScreenShot(String fileName1) {
 		
 		String path =  "C:\\Automation training\\Project\\Screenshots\\";
 	
@@ -97,13 +97,13 @@ public class ScreenShot {
 			File file = takeScreenShot.getScreenshotAs(OutputType.FILE);
 			
 			FileUtils.copyFile(file, new File(path +fileName1+"_" +dateFormat.format(now)+".png"));
-		} catch (WebDriverException e) {
+		} 
+		catch (WebDriverException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
+	
 	}
 	
 }

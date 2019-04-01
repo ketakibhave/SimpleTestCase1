@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Iterator;
 
+import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -19,7 +22,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  *      access.
  */
 public class ApachePOIExcelRead {
-	public  String [][] getExcelContent(String fileName) {
+	public  String [][] getExcelContent(String fileName, int sheetNo) {
 		int rowCount =0; 
 		String [][] list1 = null; 
 		
@@ -31,7 +34,7 @@ public class ApachePOIExcelRead {
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 
 			// Get first/desired sheet from the workbook
-			XSSFSheet sheet = workbook.getSheetAt(0);
+			XSSFSheet sheet = workbook.getSheetAt(sheetNo);
 			
 			int rowTotal = sheet.getLastRowNum();
 
@@ -42,7 +45,7 @@ public class ApachePOIExcelRead {
 			
 			// Iterate through each rows one by one
 			Iterator<Row> rowIterator = sheet.iterator();
-			 list1 = new String[rowTotal][2];
+			 list1 = new String[rowTotal][];
 			 
 			while (rowIterator.hasNext()) {
 				Row row = rowIterator.next();
@@ -53,10 +56,14 @@ public class ApachePOIExcelRead {
 				int noOfColumns = row.getLastCellNum(); 
 				String[] tempList1 = new String[noOfColumns];
 				
-				
-				
 				while (cellIterator.hasNext()) {
 					Cell cell = cellIterator.next();
+					
+					DataFormatter dataFormatter = new DataFormatter();
+					String cellStringValue = dataFormatter.formatCellValue(cell);
+					//System.out.println ("Is shows data as show in Excel file" + cellStringValue);				
+					tempList1[cellCount] =dataFormatter.formatCellValue(cell);
+					/*
 					// Check the cell type and format accordingly
 					switch (cell.getCellType()) {
 
@@ -71,7 +78,12 @@ public class ApachePOIExcelRead {
 							tempList1[cellCount] =cell.getStringCellValue();
 						}
 						break;
+					case Cell.CELL_TYPE_BLANK:
+						tempList1[cellCount] ="";
+						System.out.println("blank");
+					
 					}
+					*/
 					cellCount ++; 
 				}
 				if(tempList1 != null){
@@ -89,9 +101,9 @@ public class ApachePOIExcelRead {
 	}
 
 	public static void main(String[] args) {
-		String fileName = "C:/Users/Naveen/Desktop/Testing.xlsx";
+		String fileName = "C:\\Automation training\\Project\\Testing2.xlsx";
 		
-		for(String [] temp : new ApachePOIExcelRead().getExcelContent(fileName)){
+		for(String [] temp : new ApachePOIExcelRead().getExcelContent(fileName, 3)){
 			for(String  tt : temp){
 				System.out.println(tt);
 			}

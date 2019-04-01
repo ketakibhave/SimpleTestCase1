@@ -6,7 +6,7 @@
       <class name="com.training.sanity.tests.RTTC_081">
         <methods>
           <include name="tearDown"/>
-          <include name="returnProduct"/>
+          <include name="returnProduct" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.training.sanity.tests.RTTC_081 -->
